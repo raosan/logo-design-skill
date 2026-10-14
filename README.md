@@ -4,8 +4,8 @@
 
 ![Twenty-eight example runs of the logo-design skill](docs/images/hero.png)
 
-A comprehensive **logo-design skill** that turns Claude — or any agent that supports Agent Skills, such as Gemini
-CLI, Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to
+A comprehensive **logo-design skill** that turns Claude — or any agent that supports Agent Skills, such as agy,
+Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to
 production-ready SVG files and brand guidelines.
 
 - **Principles & process** — discovery and briefs, word mapping, choosing the right mark type, concepting,
@@ -63,7 +63,7 @@ Download `logo-design.zip` from the [Releases](https://github.com/kaankiziltug/l
 `python3 tools/package_skill.py`) and upload it under **Settings → Capabilities → Skills**. If your upload has a size
 limit, use `logo-design-lite.zip` (everything except the SVG files themselves).
 
-### Gemini CLI, Codex CLI and other agents
+### agy, Codex CLI and other agents
 The skill uses the open **Agent Skills** format (a folder with a `SKILL.md`), so it works in any agent that supports
 skills — the instructions are plain Markdown and the tools are plain Python. Clone once, then copy the folder into
 your agent's skills directory:
@@ -73,12 +73,12 @@ git clone https://github.com/kaankiziltug/logo-design-skill.git
 
 | Agent | Personal (all projects) | Per project |
 |---|---|---|
-| Gemini CLI | `~/.gemini/skills/logo-design` (or `~/.agents/skills/`) | `.gemini/skills/logo-design` |
+| agy | `~/.agents/skills/logo-design` | `.agents/skills/logo-design` |
 | Codex CLI | `~/.codex/skills/logo-design` | `.codex/skills/logo-design` |
 | Cursor, GitHub Copilot, OpenCode, others | see your agent's skills docs | usually a `skills/` folder in the project |
 
 ```bash
-cp -r logo-design-skill/skills/logo-design ~/.gemini/skills/logo-design     # Gemini CLI
+cp -r logo-design-skill/skills/logo-design ~/.agents/skills/logo-design     # agy
 cp -r logo-design-skill/skills/logo-design ~/.codex/skills/logo-design      # Codex CLI
 ```
 Start a new session and ask for a logo; the agent picks the skill up from its description. The skill works best with

@@ -5,7 +5,7 @@
 ![Twenty-eight example runs of the logo-design skill](docs/images/hero.png)
 
 A comprehensive **logo-design skill** that turns Claude — or any agent that supports Agent Skills, such as agy,
-OpenCode, Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to
+Command Code, OpenCode, Codex CLI, Cursor or GitHub Copilot — into a disciplined identity designer, from the first brief to
 production-ready SVG files and brand guidelines.
 
 - **Principles & process** — discovery and briefs, word mapping, choosing the right mark type, concepting,
@@ -63,7 +63,7 @@ Download `logo-design.zip` from the [Releases](https://github.com/kaankiziltug/l
 `python3 tools/package_skill.py`) and upload it under **Settings → Capabilities → Skills**. If your upload has a size
 limit, use `logo-design-lite.zip` (everything except the SVG files themselves).
 
-### agy, OpenCode, Codex CLI and other agents
+### agy, Command Code, OpenCode, Codex CLI and other agents
 The skill uses the open **Agent Skills** format (a folder with a `SKILL.md`), so it works in any agent that supports
 skills — the instructions are plain Markdown and the tools are plain Python. Clone once, then copy the folder into
 your agent's skills directory:
@@ -74,12 +74,14 @@ git clone https://github.com/kaankiziltug/logo-design-skill.git
 | Agent | Personal (all projects) | Per project |
 |---|---|---|
 | agy | `~/.agents/skills/logo-design` | `.agents/skills/logo-design` |
+| Command Code | `~/.commandcode/skills/logo-design` (or `~/.agents/skills/`) | `.commandcode/skills/logo-design` (or `.agents/skills/`) |
 | OpenCode | `~/.config/opencode/skills/logo-design` | `.opencode/skills/logo-design` (or `opencode.json`) |
 | Codex CLI | `~/.codex/skills/logo-design` | `.codex/skills/logo-design` |
 | Cursor, GitHub Copilot, others | see your agent's skills docs | usually a `skills/` folder in the project |
 
 ```bash
 cp -r logo-design-skill/skills/logo-design ~/.agents/skills/logo-design          # agy
+cp -r logo-design-skill/skills/logo-design ~/.commandcode/skills/logo-design     # Command Code
 cp -r logo-design-skill/skills/logo-design ~/.config/opencode/skills/logo-design # OpenCode
 cp -r logo-design-skill/skills/logo-design ~/.codex/skills/logo-design           # Codex CLI
 ```
